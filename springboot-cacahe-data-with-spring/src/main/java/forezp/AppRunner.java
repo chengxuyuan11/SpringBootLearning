@@ -4,12 +4,14 @@ import forezp.dao.BookRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by fangzhipeng on 2017/4/19.
  */
 @Component
+@Order(value = 2)
 public class AppRunner implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(AppRunner.class);
@@ -28,7 +30,7 @@ public class AppRunner implements CommandLineRunner {
         logger.info("isbn-1234 -->" + bookRepository.getByIsbn("isbn-1234"));
         logger.info("isbn-4567 -->" + bookRepository.getByIsbn("isbn-4567"));
         logger.info("isbn-1234 -->" + bookRepository.getByIsbn("isbn-1234"));
-        logger.info("isbn-1234 -->" + bookRepository.getByIsbn("isbn-1234"));
+        logger.info("isbn-4567 -->" + bookRepository.getByIsbn("isbn-4567"));
     }
 
 }

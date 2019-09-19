@@ -30,6 +30,7 @@ public class SpringbootResttemplateApplication {
 		return builder.build();
 	}
 
+	//http:///gturnquist-quoters.cfapps.io/api/random 随机生成json字符串的服务
 	@Bean
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 		return args -> {
